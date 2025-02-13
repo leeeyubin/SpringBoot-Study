@@ -35,7 +35,7 @@ public String helloMvc(@RequestParam("name") String name, Model model){
 
 => 결과
 
-<img width="400" src="https://github.com/user-attachments/assets/0a24ac5b-9842-41f7-aee5-7f2523a725ef" />
+<img width="450" src="https://github.com/user-attachments/assets/0a24ac5b-9842-41f7-aee5-7f2523a725ef" />
 
 ## 3. API
 <img width="794" src="https://github.com/user-attachments/assets/0bd7cfe6-33de-488d-9835-19d1a911fcbb" />
