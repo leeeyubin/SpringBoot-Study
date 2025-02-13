@@ -39,7 +39,7 @@
 - 자바스크립트는 웹 브라우저에만 동작하는 인터프리터 방식 언어이다.
 
 #### 📍 타입스크립트
-<img width = "80" src ="https://github.com/user-attachments/assets/47887303-71d9-4124-8942-564be24e4388">
+<img width="80" src="https://github.com/user-attachments/assets/8978f111-b7f7-4ca2-8223-3cedc4ecc98c" />
 
 > 타입스크립트는 자바스크립트의 단점을 보완하기 위해 만든 컴파일 언어이다.
 
@@ -48,7 +48,7 @@
 
 #### 📍 자바
 
-<img width="100" src=" https://github.com/user-attachments/assets/f81051de-2d44-4f20-88a1-391352d7a2ac">
+<img width="100" src="https://github.com/user-attachments/assets/8e82f854-e830-487f-8abf-fa854dc702e6">
 
 > 자바는 썬마이크로시스템즈가 개발한 객체지향 프로그래밍 언어이다.
 
