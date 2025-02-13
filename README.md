@@ -5,6 +5,7 @@
 |                                                Title                                                | Chapter |    Date    | 
 |:---------------------------------------------------------------------------------------------------:|:-------:|:----------:|
 | [CS 기초 지식](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/book/chapter02-cs.md) |   02    | 2025.02.07 |
+| [백엔드 개발 언어와 프레임 워크](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/book/chapter02-cs.md) |   03    | 2025.02.13 |
 
 #### 💻 스프링 입문 
 |                                                 Title                                                  | Chapter |    Date    | 
