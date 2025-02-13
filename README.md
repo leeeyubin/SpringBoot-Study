@@ -4,7 +4,7 @@
 #### 📚 아는 만큼 보이는 백엔드 개발
 |                                                Title                                                | Chapter |    Date    | 
 |:---------------------------------------------------------------------------------------------------:|:-------:|:----------:|
-| [CS 기초 지식](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/book/chapter01-cs.md) |   02    | 2025.02.07 |
+| [CS 기초 지식](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/book/chapter02-cs.md) |   02    | 2025.02.07 |
 
 #### 💻 스프링 입문 
 |                                                 Title                                                  | Chapter |    Date    | 
