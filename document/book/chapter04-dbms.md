@@ -192,7 +192,7 @@ db.컬렉션명.updateMany({filter}, {update})
 - `deleteOne`: 조건에 부합하는 도큐먼트 중 맨 처음 도큐먼트만 삭제한다.
 - `deleteMany`: 조건에 부합하는 모든 도큐먼트를 삭제한다.
 
-```shell
+```
 db.컬렉션명.deleteOne({조건})
 db.컬렉션명.deleteMany({조건})
 db.컬렉션명.deleteMany({})
