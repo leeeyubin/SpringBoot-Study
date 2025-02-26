@@ -10,7 +10,8 @@
 
 
 #### 💻 스프링 입문 
-|                                                 Title                                                  | Chapter |    Date    | 
-|:------------------------------------------------------------------------------------------------------:|:-------:|:----------:|
+|                                                     Title                                                      | Chapter |    Date    | 
+|:--------------------------------------------------------------------------------------------------------------:|:-------:|:----------:|
 | [스프링 웹 개발 기초](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/lecture/chapter02-concept.md) |   02    | 2025.02.12 | 
+|    [회원관리 예제](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/lecture/chapter03-auth.md)     |   03    | 2025.02.26 | 
 <br>
