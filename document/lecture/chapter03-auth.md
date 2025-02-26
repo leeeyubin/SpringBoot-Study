@@ -11,7 +11,7 @@
 #### 클래스 의존 관계
 <img width="692" alt="image" src="https://github.com/user-attachments/assets/fdaa440b-5781-4f1c-be17-3c8ff2954b4b" />
 
-## 회원 도메인과 레포지토리 만들기
+### 회원 도메인과 레포지토리 만들기
 
 - `domain`에 회원 객체를 만들어 준다.
 ```java
@@ -89,7 +89,7 @@ public class MemoryMemberRepository implements MemberRepository {
 }
 ```
 
-## 회원 레포지토리 테스트 케이스 작성
+### 회원 레포지토리 테스트 케이스 작성
 
 - 코드로 작성한 것은 `테스트코드`를 작성하여 확인할 수 있다.
 - `JUnit`이라는 프레임워크로 테스트를 실행할 수 있다.
@@ -148,7 +148,7 @@ class MemoryMemberRepositoryTest {
 }
 ```
 
-## 회원 서비스 개발
+### 회원 서비스 개발
 
 - 아래 코드는 회원 서비스 역할을 하는 코드이다.
 
@@ -190,7 +190,7 @@ public class MemberService {
 
 }
 ```
-## 회원 서비스 테스트
+### 회원 서비스 테스트
 
 - 💡이번 공부에서 어쩌면 가장 익숙한 개념이기도 했던 `DI`에 대해 집중해보자.
 - 원래 테스트를 작성할 때 `회원 서비스`가 `회원 레포지토리`를 직접 생성하게 했다.
