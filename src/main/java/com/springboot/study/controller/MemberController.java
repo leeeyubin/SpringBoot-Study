@@ -18,9 +18,9 @@ public class MemberController {
         this.memberService = memberService;
     }
 
-//    3) 세터 주입
-//    @Autowired
-//    public void setMemberService(MemberService memberService) {
-//        this.memberService = memberService;
-//    }
+    // 3) 세터 주입
+    // @Autowired
+    // public void setMemberService(MemberService memberService) {
+    //     this.memberService = memberService;
+    // }
 }
