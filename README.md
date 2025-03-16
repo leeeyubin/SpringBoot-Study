@@ -16,4 +16,6 @@
 |:--------------------------------------------------------------------------------------------------------------:|:-------:|:----------:|
 | [스프링 웹 개발 기초](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/lecture/chapter02-concept.md) |   02    | 2025.02.12 | 
 |    [회원관리 예제](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/lecture/chapter03-auth.md)     |   03    | 2025.02.26 | 
+|  [스프링 빈과 의존관계](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/lecture/chapter04-bean.md)   |   04    | 2025.03.16 | 
+
 <br>
