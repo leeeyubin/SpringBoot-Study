@@ -9,6 +9,7 @@
 |          [DBMS](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/book/chapter04-dbms.md)          |   04    | 2025.02.20 |
 |           [API](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/book/chapter05-api.md)           |   05    | 2025.03.01 |
 |        [버전 관리 시스템](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/book/chapter06-git.md)        |   06    | 2025.03.16 |
+|        [클라우드 컴퓨팅](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/book/chapter07-cloud.md)         |   07    | 2025.03.20 |
 
 
 #### 💻 스프링 입문 
