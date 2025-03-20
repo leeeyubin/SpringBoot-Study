@@ -1,6 +1,14 @@
 # SpringBoot-Study
 - ☁️ 서버 (SpringBoot) 공부내용을 기록합니다.️
 
+#### 💻 스프링 입문
+|                                                     Title                                                      | Chapter |    Date    | 
+|:--------------------------------------------------------------------------------------------------------------:|:-------:|:----------:|
+| [스프링 웹 개발 기초](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/lecture/chapter02-concept.md) |   02    | 2025.02.12 | 
+|    [회원관리 예제](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/lecture/chapter03-auth.md)     |   03    | 2025.02.26 | 
+|  [스프링 빈과 의존관계](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/lecture/chapter04-bean.md)   |   04    | 2025.03.16 | 
+
+
 #### 📚 아는 만큼 보이는 백엔드 개발
 |                                                        Title                                                        | Chapter |    Date    | 
 |:-------------------------------------------------------------------------------------------------------------------:|:-------:|:----------:|
@@ -10,13 +18,5 @@
 |           [API](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/book/chapter05-api.md)           |   05    | 2025.03.01 |
 |        [버전 관리 시스템](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/book/chapter06-git.md)        |   06    | 2025.03.16 |
 |        [클라우드 컴퓨팅](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/book/chapter07-cloud.md)         |   07    | 2025.03.20 |
-
-
-#### 💻 스프링 입문 
-|                                                     Title                                                      | Chapter |    Date    | 
-|:--------------------------------------------------------------------------------------------------------------:|:-------:|:----------:|
-| [스프링 웹 개발 기초](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/lecture/chapter02-concept.md) |   02    | 2025.02.12 | 
-|    [회원관리 예제](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/lecture/chapter03-auth.md)     |   03    | 2025.02.26 | 
-|  [스프링 빈과 의존관계](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/lecture/chapter04-bean.md)   |   04    | 2025.03.16 | 
 
 <br>
