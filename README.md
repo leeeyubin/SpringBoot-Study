@@ -8,7 +8,9 @@
 |     [회원관리 예제](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/lecture/chapter03-auth.md)      |   03    | 2025.02.26 | 
 |   [스프링 빈과 의존관계](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/lecture/chapter04-bean.md)    |   04    | 2025.03.16 | 
 | [회원관리 예제 -웹 MVC 개발](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/lecture/chapter05-mvc.md) |   05    | 2025.03.27 | 
-|                                                 [스프링 DB 접근 기술](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/lecture/chapter06-db.md)                                                 |   06    | 2025.04.19 |
+|    [스프링 DB 접근 기술](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/lecture/chapter06-db.md)    |   06    | 2025.04.18 |
+|        [AOP](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/lecture/chapter07-aop.md)        |   07    | 2025.04.19 |
+
 
 #### 📚 아는 만큼 보이는 백엔드 개발
 |                                                        Title                                                        | Chapter |    Date    | 
