@@ -1,7 +1,6 @@
 package com.springboot.study.service;
 
 import com.springboot.study.domain.Member;
-import com.springboot.study.repository.MemberRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +14,6 @@ import static org.assertj.core.api.Fail.fail;
 public class MemberServiceTestIntegrationTest {
 
     @Autowired MemberService memberService;
-    @Autowired MemberRepository memberRepository;
 
     @Test
     void 회원가입() {
