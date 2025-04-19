@@ -1,10 +1,13 @@
 package com.springboot.study;
 
+import com.springboot.study.aop.TimeTraceAop;
 import com.springboot.study.repository.MemberRepository;
 import com.springboot.study.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import java.sql.Time;
 
 @Configuration
 public class SpringConfig {
