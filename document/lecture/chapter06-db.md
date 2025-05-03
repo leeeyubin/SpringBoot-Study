@@ -21,7 +21,7 @@ create table member
 - JPA는 어플리케이션에서 관계형 데이터베이스를 사용하는 방식(ORM 기술)을 정의한 인터페이스이다.
 - JPA를 구현한 대표적인 오픈소스로는 `Hibernate`가 있다.
 
-<img src="https://github.com/user-attachments/assets/408b0d9c-8118-4885-a8d3-6c0f6fee08ca">
+<img width=540 src="https://github.com/user-attachments/assets/7598c103-df78-4d3f-a315-b3f469d4495d">
 
 #### 구현방법을 통해 자세하게 알아보자.
 - 우선, JPA 관련 라이브러리를 추가한다.
