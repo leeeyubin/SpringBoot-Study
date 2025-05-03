@@ -16,9 +16,15 @@ create table member
 ## JPA
 > - JPA는 기존의 반복 코드는 물론이고, 기본적인 SQL도 JPA가 직접 만들어서 실행해준다.
 > - JPA를 사용하면, SQL과 데이터 중심의 설계에서 객체 중심의 설계로 패러다임을 전환할 수 있다.
-> - JPA를 사용하면 개발 생산성을 크게 높일 수 있다.
 
-- JPA 관련 라이브러리를 추가한다.
+#### JPA란?
+- JPA는 어플리케이션에서 관계형 데이터베이스를 사용하는 방식(ORM 기술)을 정의한 인터페이스이다.
+- JPA를 구현한 대표적인 오픈소스로는 `Hibernate`가 있다.
+
+<img src="https://github.com/user-attachments/assets/408b0d9c-8118-4885-a8d3-6c0f6fee08ca">
+
+#### 구현방법을 통해 자세하게 알아보자.
+- 우선, JPA 관련 라이브러리를 추가한다.
 
 ```groovy
 dependencies {
@@ -35,6 +41,8 @@ spring.jpa.hibernate.ddl-auto=none
 ```
 
 - JPA 엔티티 매핑
+  - `@Entity`: 데이터베이스 테이블에 매핑되는 JPA 엔티티 클래스임을 명시한다.
+  - `@Id`: 해당 테이블의 기본 키(PK)이다.
 ```java
 @Entity
 public class Member {
@@ -63,6 +71,10 @@ public class Member {
 }
 ```
 - JPA 회원 레포지토리
+  - `EntityManager`란 엔티티를 저장하고, 수정하고, 삭제하고 조회하는 등 엔티티와 관련된 모든 일을 처리한다.
+    - `영속성 컨텍스트`: 데이터베이스와 에플리케이션 사이에 엔티티를 저장하는 논리적인 영역이다.
+      - `persist`를 통해 엔티티를 엔티티 매니저가 영속성 컨텍스트에 등록한다.
+
 ```java
 public class JpaMemberRepository implements MemberRepository {
 
@@ -74,7 +86,7 @@ public class JpaMemberRepository implements MemberRepository {
 
     @Override
     public Member save(Member member) {
-        em.persist(member);
+        em.persist(member); // ⭐️ JPA(Hibernate)가 내부적으로 SQL을 생성해서 실행한다!
         return member;
     }
 
