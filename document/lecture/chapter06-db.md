@@ -18,7 +18,7 @@ create table member
 > - JPA를 사용하면, SQL과 데이터 중심의 설계에서 객체 중심의 설계로 패러다임을 전환할 수 있다.
 
 #### JPA란?
-- JPA는 어플리케이션에서 관계형 데이터베이스를 사용하는 방식(ORM 기술)을 정의한 인터페이스이다.
+- JPA는 어플리케이션에서 관계형 데이터베이스를 사용하는 방식(ORM 기술)을 정의한 "인터페이스"이다.
 - JPA를 구현한 대표적인 오픈소스로는 `Hibernate`가 있다.
 
 <img width=540 src="https://github.com/user-attachments/assets/7598c103-df78-4d3f-a315-b3f469d4495d">
@@ -151,6 +151,15 @@ public class SpringConfig {
 ## 스프링 데이터 JPA
 > - 스프링 데이터 JPA를 활용하면 레포지토리에 구현 클래스 없이 인터페이스 만으로 개발을 할 수 있다.
 > - 반복 개발해온 기본 CRUD 기능도 스프링 데이터 JPA가 모두 제공한다.
+
+#### 스프링 데이터 JPA란
+
+- 스프링 데이터 JPA는 JPA를 한 단계 추상화시킨 Repository라는 인터페이스를 제공함으로써 이루어진다. 
+- 스프링 데이터 JPA가 JPA를 추상화했다는 말은, 스프링 데이터 JPA의 Repository의 구현에서 JPA를 사용하고 있다는 것이다. 
+  - Repository 인터페이스의 기본 구현체인 `SimpleJpaRepository`의 코드를 보면 아래와 같이 내부적으로 EntityManager을 사용하고 있다.
+
+<img width=500 src="https://github.com/user-attachments/assets/2778e510-6079-4fd1-86b4-61ea2bc51989">
+
 
 - 스프링 데이터 JPA 레포지토리
 ```java
