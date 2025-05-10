@@ -4,7 +4,6 @@
 #### 💻 스프링 핵심 원리
 |                                                         Title                                                         | Chapter |    Date    | 
 |:---------------------------------------------------------------------------------------------------------------------:|:-------:|:----------:|
-| [객체지향 설계와 스프링](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/lecture-principle/chapter02-oop.md) |   02    | 2025.05.11 | 
 
 
 #### 💻 스프링 입문
