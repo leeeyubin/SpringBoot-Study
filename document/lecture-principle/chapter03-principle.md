@@ -53,7 +53,7 @@ public class Member {
 ```
 
 - 이제 회원을 저장할 저장소를 구현해 보자.
-- 회원을 가입하고 조회할 수 있는 기능이 있어야 하기 때문에 `save와` `findById` 함수를 작성해 준다.
+- 회원을 가입하고 조회할 수 있는 기능이 있어야 하기 때문에 `save`와 `findById` 함수를 작성해 준다.
 ```java
 public interface MemberRepository {
 
@@ -150,7 +150,7 @@ public class FixDiscountPolicy implements DiscountPolicy {
 ```
 
 - 그다음, 주문 엔티티를 작성해 준다.
-- - ⭐️ `control` + `enter`: toStirng() 쉽게 만들 수 있는 단축키
+- ⭐️ `control` + `enter`: toStirng() 쉽게 만들 수 있는 단축키
 ```java
 public class Order {
 
