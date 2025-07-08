@@ -1,6 +1,7 @@
 package com.springboot.study.service;
 
-import com.springboot.study.domain.Member;
+import com.springboot.study.introduction.domain.Member;
+import com.springboot.study.introduction.service.MemberService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,8 @@ import static org.assertj.core.api.Fail.fail;
 @Transactional
 public class MemberServiceTestIntegrationTest {
 
-    @Autowired MemberService memberService;
+    @Autowired
+    MemberService memberService;
 
     @Test
 //    @Commit

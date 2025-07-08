@@ -1,6 +1,6 @@
-package com.springboot.study.repository;
+package com.springboot.study.introduction.repository;
 
-import com.springboot.study.domain.Member;
+import com.springboot.study.introduction.domain.Member;
 import java.util.*;
 
 public class MemoryMemberRepository implements MemberRepository {

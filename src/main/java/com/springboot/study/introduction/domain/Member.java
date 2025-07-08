@@ -1,4 +1,4 @@
-package com.springboot.study.domain;
+package com.springboot.study.introduction.domain;
 
 import jakarta.persistence.*;
 

@@ -1,7 +1,7 @@
 package com.springboot.study;
 
-import com.springboot.study.repository.MemberRepository;
-import com.springboot.study.service.MemberService;
+import com.springboot.study.introduction.repository.MemberRepository;
+import com.springboot.study.introduction.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

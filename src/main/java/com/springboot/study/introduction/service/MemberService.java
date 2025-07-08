@@ -1,7 +1,7 @@
-package com.springboot.study.service;
+package com.springboot.study.introduction.service;
 
-import com.springboot.study.domain.Member;
-import com.springboot.study.repository.MemberRepository;
+import com.springboot.study.introduction.domain.Member;
+import com.springboot.study.introduction.repository.MemberRepository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;

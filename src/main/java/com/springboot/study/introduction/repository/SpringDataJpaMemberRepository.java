@@ -1,6 +1,6 @@
-package com.springboot.study.repository;
+package com.springboot.study.introduction.repository;
 
-import com.springboot.study.domain.Member;
+import com.springboot.study.introduction.domain.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package com.springboot.study.controller;
+package com.springboot.study.introduction.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

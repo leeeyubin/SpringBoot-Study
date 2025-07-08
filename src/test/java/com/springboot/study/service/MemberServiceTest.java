@@ -1,7 +1,8 @@
 package com.springboot.study.service;
 
-import com.springboot.study.domain.Member;
-import com.springboot.study.repository.MemoryMemberRepository;
+import com.springboot.study.introduction.domain.Member;
+import com.springboot.study.introduction.repository.MemoryMemberRepository;
+import com.springboot.study.introduction.service.MemberService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
