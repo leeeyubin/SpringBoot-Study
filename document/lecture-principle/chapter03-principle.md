@@ -1,7 +1,7 @@
 # 스프링 핵심 원리 이해 1
 
 ## 비즈니스 요구사항 설계
-- 지금까지 서버를 개발하면서 느낀 점은 "비즈니스 요구사항을 잘 작성해야 한다"는 것이다.
+- 지금까지 서버를 개발하면서 느낀 점은 "`비즈니스 요구사항을 잘 작성해야 한다`"는 것이다.
 - ERD 등을 설계할 때도 이러한 점이 크게 작용했었다. 따라서 다음의 비즈니스 요구사항을 자세히 살펴보도록 하자.
 
 ```
@@ -48,29 +48,7 @@ public class Member {
         this.graade = graade;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public Grade getGraade() {
-        return graade;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setGraade(Grade graade) {
-        this.graade = graade;
-    }
+    // getter, setter 생략 ...
 }
 ```
 
@@ -135,3 +113,100 @@ public class MemberServiceImpl implements MemberService{
 
 ## 주문과 할인 도메인 설계
 - 두 번째 비즈니스 로직인 `주문과 할인 도메인`을 개발해 볼 것이다.
+- 비즈니스 요구사항을 정리하면 아래와 같다.
+
+<img width="781" alt="image" src="https://github.com/user-attachments/assets/d9beeaae-1c21-4045-9e82-e864e8273e37" />
+<br>
+<img width="612" alt="image" src="https://github.com/user-attachments/assets/8e253acf-fba2-42f9-84d3-82f0336066a7" />
+<br>
+<img width="616" alt="image" src="https://github.com/user-attachments/assets/cb40d141-f3b8-4806-b1e0-b01be0ae2d9c" />
+
+## 주문과 할인 도메인 개발
+- 할인 정책을 위한 `interface`와 `구현체`를 작성해 준다.
+- "`모든 VIP에게 1,000원을 할인해주는 고정 금액 할인으로 적용해달라`"는 요구사항이 있었으므로 if 조건문을 통해 분기처리 한다.
+```java
+
+public interface DiscountPolicy {
+    /**
+     * @return 할인 대상 금액
+     */
+    int discount(Member member, int price);
+}
+```
+```java
+public class FixDiscountPolicy implements DiscountPolicy {
+
+    private int discountFixAmount = 1000; // 1000원 할인
+
+    @Override
+    public int discount(Member member, int price) {
+        if (member.getGraade() == Grade.VIP) {
+            return discountFixAmount;
+        } else {
+            return 0;
+        }
+    }
+}
+```
+
+- 그다음, 주문 엔티티를 작성해 준다.
+- - ⭐️ `control` + `enter`: toStirng() 쉽게 만들 수 있는 단축키
+```java
+public class Order {
+
+    private Long memberId;
+    private String itemName;
+    private int itemPrice;
+    private int discountPrice;
+
+    public Order(Long memberId, String itemName, int itemPrice, int discountPrice) {
+        this.memberId = memberId;
+        this.itemName = itemName;
+        this.itemPrice = itemPrice;
+        this.discountPrice = discountPrice;
+    }
+
+    public int calculatePrice() {
+        return itemPrice - discountPrice;
+    }
+
+    // getter, setter 생략 ...
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "memberId=" + memberId +
+                ", itemName='" + itemName + '\'' +
+                ", itemPrice=" + itemPrice +
+                ", discountPrice=" + discountPrice +
+                '}';
+    }
+}
+
+```
+
+- 마지막으로 주문 서비스의 interface와 구현체는 다음과 같다.
+```java
+public interface OrderService {
+    Order createOrder(Long memberId, String itemName, int itemPrice);
+}
+```
+```java
+public class OrderServiceImpl implements OrderService{
+
+    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
+
+    @Override
+    public Order createOrder(Long memberId, String itemName, int itemPrice) {
+        Member member = memberRepository.findById(memberId);
+        int discountPrice = discountPolicy.discount(member, itemPrice);
+
+        return new Order(memberId, itemName, itemPrice, discountPrice);
+    }
+}
+```
+
+- 테스트 코드도 정상적으로 동작하는 것을 확인함으로써 예제 만드는 것을 마무리 하겠다.
+
+<img width="487" alt="image" src="https://github.com/user-attachments/assets/6cf3e3f8-21db-4b6c-bedf-aa3fbfc6cef5" />
