@@ -1,0 +1,18 @@
+package com.springboot.study.principle;
+
+import com.springboot.study.principle.member.Grade;
+import com.springboot.study.principle.member.Member;
+import com.springboot.study.principle.member.MemberService;
+import com.springboot.study.principle.member.MemberServiceImpl;
+
+public class MemberApp {
+    public static void main(String[] args) {
+        MemberService memberService = new MemberServiceImpl();
+        Member member = new Member(1L, "memberA", Grade.VIP);
+        memberService.join(member);
+
+        Member findMember = memberService.findMember(1L);
+        System.out.println("new member = " + member.getName());
+        System.out.println("findMember = " + findMember.getName());
+    }
+}
