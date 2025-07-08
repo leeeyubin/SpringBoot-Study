@@ -1,8 +1,8 @@
 # 스프링 핵심 원리 이해 1
 
 ## 비즈니스 요구사항 설계
-- 코드를 작성하기 위해서는 비즈니스 요구사항 설계를 잘 작성하는 것이 중요하다고 생각한다.
-- 그래서 먼저 짚고 넘어가보자.
+- 지금까지 서버를 개발하면서 느낀 점은 "비즈니스 요구사항을 잘 작성해야 한다"는 것이다.
+- ERD 등을 설계할 때도 이러한 점이 크게 작용했었다. 따라서 다음의 비즈니스 요구사항을 자세히 살펴보도록 하자.
 
 ```
 1. 회원
@@ -18,7 +18,7 @@
 ```
 
 ## 회원 도메인 설계
-- 첫 번째 비즈니스 로직인 회원 도메인을 개발해 보자.
+- 첫 번째 비즈니스 로직인 `회원 도메인`을 개발해 볼 것이다.
 - 우선 비즈니스 요구사항을 정리하면 아래와 같다.
 
 <img width="759" alt="image" src="https://github.com/user-attachments/assets/71ea8533-8e35-458f-9329-1560ba812756" />
@@ -103,7 +103,7 @@ public class MemoryMemberRepository implements MemberRepository {
 ```
 
 - 마지막으로 서비스를 작성해 주면 된다.
-- 똑같은 흐름으로 `interface`와 구현체를 각각 작성해 준다.
+- 똑같은 흐름으로 `interface`와 `구현체`를 각각 작성해 준다.
 ```java
 public interface MemberService {
 
@@ -134,4 +134,4 @@ public class MemberServiceImpl implements MemberService{
 <img width="480" alt="image" src="https://github.com/user-attachments/assets/26eefa30-58bb-42db-8403-47c30ce7df20" />
 
 ## 주문과 할인 도메인 설계
-- 두 번째 비즈니스 로직인 주문과 할인 도메인을 개발해 보자.
+- 두 번째 비즈니스 로직인 `주문과 할인 도메인`을 개발해 볼 것이다.
