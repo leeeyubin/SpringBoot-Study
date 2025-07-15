@@ -2,9 +2,11 @@
 - ☁️ 서버 (SpringBoot) 공부내용을 기록합니다.️
 
 #### 💻 스프링 핵심 원리
-|                                                             Title                                                              | Chapter |    Date    | 
-|:------------------------------------------------------------------------------------------------------------------------------:|:-------:|:----------:|
+|                                                             Title                                                             | Chapter |    Date    | 
+|:-----------------------------------------------------------------------------------------------------------------------------:|:-------:|:----------:|
 | [스프링 핵심 원리 이해 1](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/lecture-principle/chapter03-principle.md) |   03    | 2025.07.08 | 
+| [스프링 핵심 원리 이해 2](https://github.com/leeeyubin/SpringBoot-Study/blob/master/document/lecture-principle/chapter03-principle.md) |   04    | 2025.07.16 | 
+
 
 #### 💻 스프링 입문
 |                                                             Title                                                             | Chapter |    Date    | 
