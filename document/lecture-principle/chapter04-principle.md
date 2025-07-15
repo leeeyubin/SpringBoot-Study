@@ -31,3 +31,10 @@ public class OrderServiceImpl implements OrderService{
 }
 ```
 
+- 문제점인 이유
+  - 추상 인터페이스뿐만 아니라 구현 클래스에도 의존을 하고 있다!
+  - 추상 인터페이스: `DiscountPolicy`
+  - 구현 클래스: `FixDiscountPolicy`, `RateDiscountPolicy`
+
+<img width="598" height="263" src="https://github.com/user-attachments/assets/afd01e7a-b00b-492a-8af3-1636c9df6927" />
+
