@@ -3,7 +3,7 @@
 ## 새로운 할인 정책 개발
 >`요청`: 고정 금액 할인이 아니라, 정률% 할인으로 바꿔주세요.
 
-- 따라서 `RateDiscountPolicy` 추가
+- 따라서 `RateDiscountPolicy`를 추가해 준다.
 
 <img width="628" height="305" src="https://github.com/user-attachments/assets/39614f8c-a775-4c61-8804-a8e65ad7ed6c" />
 
@@ -51,3 +51,26 @@ public class OrderServiceImpl implements OrderService{
   - 구현체가 없기 때문에 이렇게만 작성할 경우 NPE이 발생할 텐데 괜찮을까?
 - ✅해결방법
   - 클라이언트인 `OrderServiceImpl`에 `DiscountPolicy` 구현 객체를 대신 생성하고 주입해 주면 된다.
+
+## 관심사의 분리
+- `AppConfig`
+  - 애플리케이션의 전체 동작 방식을 구성(config)하기 위해 구현 객체를 생성하고, 연결하는 책임을 가지는 별도의 설정 클래스를 만들어 준다.
+```java
+public class AppConfig {
+
+    public MemberService memberService() {
+        return new MemberServiceImpl(new MemoryMemberRepository());
+    }
+
+    public OrderService orderService() {
+        return new OrderServiceImpl(new MemoryMemberRepository(), new FixDiscountPolicy());
+    }
+
+}
+```
+
+- 이때 각 클래스에 생성자를 작성해주어야 컴파일 오류가 발생하지 않는다.
+
+<img width="625" height="384" src="https://github.com/user-attachments/assets/bd850f11-ca3e-4c6d-ab46-bd301e2d5f40" />
+
+- 이같은 작업을 통해 객체를 생성하고 연결하는 역할과 생성하는 역할이 명확히 분리가 된 것을 확인할 수 있다.

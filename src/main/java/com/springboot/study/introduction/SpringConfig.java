@@ -1,4 +1,4 @@
-package com.springboot.study;
+package com.springboot.study.introduction;
 
 import com.springboot.study.introduction.repository.MemberRepository;
 import com.springboot.study.introduction.service.MemberService;
