@@ -31,10 +31,23 @@ public class OrderServiceImpl implements OrderService{
 }
 ```
 
-- 문제점인 이유
+- ✅문제점인 이유
   - 추상 인터페이스뿐만 아니라 구현 클래스에도 의존을 하고 있다!
   - 추상 인터페이스: `DiscountPolicy`
   - 구현 클래스: `FixDiscountPolicy`, `RateDiscountPolicy`
 
 <img width="598" height="263" src="https://github.com/user-attachments/assets/afd01e7a-b00b-492a-8af3-1636c9df6927" />
 
+- ✅해결 방법
+  - DIP를 위반하지 않도록 인터페이스에만 의존하도록 의존관계를 변경한다!
+```java
+public class OrderServiceImpl implements OrderService{
+    // private final DiscountPolicy discountPolicy = new RateDiscountPolicy();
+    private DiscountPolicy discountPolicy;
+}
+```
+
+- ✅의문점
+  - 구현체가 없기 때문에 이렇게만 작성할 경우 NPE이 발생할 텐데 괜찮을까?
+- ✅해결방법
+  - 클라이언트인 `OrderServiceImpl`에 `DiscountPolicy` 구현 객체를 대신 생성하고 주입해 주면 된다.
