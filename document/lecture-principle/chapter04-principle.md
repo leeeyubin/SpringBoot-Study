@@ -85,7 +85,7 @@ public class AppConfig {
     return new MemberServiceImpl(memberRepository());
   }
 
-  private MemberRepository memberRepository() {
+  public MemberRepository memberRepository() {
     return new MemoryMemberRepository();
   }
 
@@ -107,3 +107,34 @@ public class AppConfig {
 <img width="700" src="https://github.com/user-attachments/assets/de2fa5ae-b557-45a3-b853-1e935a239ab8" />
 
 - 그럼 바꿔야 될 부분은 `AppConfig` 파일이 있는 구성 영역이 될 것이다.
+
+## 스프링으로 전환하기
+
+- 스프링은 컨테이너는 `@Configuration`가 붙은 어노테이션 클래스를 구성 정보로 인식한다.
+- 그리고 `@Bean`이 붙은 메서드를 모두 호출해서 반환된 객체를 스프링 컨테이너에 등록한다.
+
+```java
+@Configuration
+public class AppConfig {
+
+    @Bean
+    public MemberService memberService() {
+        return new MemberServiceImpl(memberRepository());
+    }
+
+    @Bean
+    public MemberRepository memberRepository() {
+        return new MemoryMemberRepository();
+    }
+
+    @Bean
+    public OrderService orderService() {
+        return new OrderServiceImpl(memberRepository(), discountPolicy());
+    }
+
+    @Bean
+    public DiscountPolicy discountPolicy() {
+        return new RateDiscountPolicy();
+    }
+}
+```
