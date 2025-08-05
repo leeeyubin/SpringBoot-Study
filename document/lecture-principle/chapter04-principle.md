@@ -75,3 +75,35 @@ public class AppConfig {
 
 - 이같은 작업을 통해 객체를 생성하고 연결하는 역할과 생성하는 역할이 명확히 분리가 된 것을 확인할 수 있다.
 
+## AppConfig 리팩토링
+
+- 기존 `AppConfig` 파에서 중복되는 부분을 제거하고, 역할에 따른 구현이 보이도록 바꾸면 다음과 같다.
+
+```java
+public class AppConfig {
+  public MemberService memberService() {
+    return new MemberServiceImpl(memberRepository());
+  }
+
+  private MemberRepository memberRepository() {
+    return new MemoryMemberRepository();
+  }
+
+  public OrderService orderService() {
+    return new OrderServiceImpl(memberRepository(), discountPolicy());
+  }
+
+  public DiscountPolicy discountPolicy() {
+    return new FixDiscountPolicy();
+  }
+}
+```
+
+## 새로운 구조와 할인 정책 적용
+
+- 정액 할인 정책을 정률% 할인 정책으로 변경이 된다고 가정하자.
+  - 즉, `FixDiscountPolicy`를 `RateDiscountPolicy`로 바꾸면 된다.
+
+<img width="700" src="https://github.com/user-attachments/assets/de2fa5ae-b557-45a3-b853-1e935a239ab8" />
+
+- 그럼 바꿔야 될 부분은 `AppConfig` 파일이 있는 구성 영역이 될 것이다.
