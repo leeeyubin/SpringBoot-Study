@@ -74,3 +74,4 @@ public class AppConfig {
 <img width="625" height="384" src="https://github.com/user-attachments/assets/bd850f11-ca3e-4c6d-ab46-bd301e2d5f40" />
 
 - 이같은 작업을 통해 객체를 생성하고 연결하는 역할과 생성하는 역할이 명확히 분리가 된 것을 확인할 수 있다.
+
