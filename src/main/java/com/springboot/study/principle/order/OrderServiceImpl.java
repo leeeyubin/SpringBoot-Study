@@ -4,7 +4,7 @@ import com.springboot.study.principle.discount.DiscountPolicy;
 import com.springboot.study.principle.member.Member;
 import com.springboot.study.principle.member.MemberRepository;
 
-public class OrderServiceImpl implements OrderService{
+public class OrderServiceImpl implements OrderService {
 
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;

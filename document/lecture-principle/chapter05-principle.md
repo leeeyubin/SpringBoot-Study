@@ -13,3 +13,4 @@ ApplicationContext applicationContext = new AnnotationConfigApplicationContext(A
 - 이때 빈 이름은 보통 메서드를 사용하는데, 직접 부여할 수도 있다.
 
 ## 컨테이너에 등록된 모든 빈 조회
+

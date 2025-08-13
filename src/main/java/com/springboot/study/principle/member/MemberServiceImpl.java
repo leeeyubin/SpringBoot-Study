@@ -1,6 +1,6 @@
 package com.springboot.study.principle.member;
 
-public class MemberServiceImpl implements MemberService{
+public class MemberServiceImpl implements MemberService {
 
     private final MemberRepository memberRepository;
 
